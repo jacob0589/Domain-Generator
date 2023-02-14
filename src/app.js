@@ -14,3 +14,22 @@ let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
 let extension = [".com", ".org"];
+
+const ejecutar = () => {
+  let text;
+  let paragraph;
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.lenth; k++) {
+        for (let l = 0; l < extension.lenth; l++) {
+          paragraph = document.createElement("p");
+          text = document.createTextNode(
+            pronoun[i] + adj[j] + noun[k] + extension[l]
+          );
+          paragraph.appendChild(text);
+          document.querySelector("#domainList").appendChild(paragraph);
+        }
+      }
+    }
+  }
+};

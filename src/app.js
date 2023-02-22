@@ -8,14 +8,13 @@ import "./assets/img/4geeks.ico";
 //window.onload = function() {
 //write your code here
 
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+let extension = [".com", ".org"];
+
+let domainNames = "";
 function createDomain() {
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let extension = [".com", ".org"];
-
-  let domainNames = "";
-
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
@@ -25,5 +24,5 @@ function createDomain() {
       }
     }
   }
-  document.getElementById("domainList").innerHTML += domainNames;
+  document.getElementById("domainList").innerHTML = createDomain(domainNames);
 }
